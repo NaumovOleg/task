@@ -1,0 +1,23 @@
+<div class="add-invoice-item">
+    <select  ng-model="inv.invoice.customer_id">
+        <option ng-repeat="customer in inv.customers" value={{customer._id}}>{{customer.name}}</option>
+    </select>
+    <input ng-model="inv.invoice.discount" placeholder="discount">
+    <button ng-click="inv.addInvoice()">Add invoice </button>
+</div>
+<div class="invoices">
+    <table class="invoices-table">
+        <tr>
+            <td>Invoice id</td>
+            <td>Customer</td>
+            <td>discount</td>
+            <td>total</td>
+        </tr>
+        <tr ng-repeat="invoice in inv.invoices"  ui-sref="invoice({invoice_id:invoice._id})">
+            <td>{{ invoice._id}}</td>
+            <td>{{ invoice.customer[0].name}}</td>
+            <td>{{ invoice.discount}}</td>
+            <td>{{ invoice.total || 'add products( click this line'}}</td>
+        </tr>
+    </table>
+</div>

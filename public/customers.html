@@ -1,0 +1,23 @@
+<div class="products-table">
+    <table>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>phone</td>
+            <td>address</td>
+        </tr>
+        <tr ng-repeat="cus in cus.customers">
+            <td>{{cus._id}}</td>
+            <td>{{cus.name}}</td>
+            <td>{{cus.phone}}</td>
+            <td>{{cus.address}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="add-product">
+    <input ng-model="cus.name" placeholder="name">
+    <input ng-model="cus.phone" placeholder="phone">
+    <input ng-model="cus.address" placeholder="address">
+    <button ng-click="cus.addCustomer()">add product</button>
+</div>

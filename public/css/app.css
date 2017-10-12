@@ -1,0 +1,43 @@
+.products-table{
+    width:100%;
+}
+table{
+    width:100%;
+}
+table tr{
+    width:100%
+}
+table tr td{
+    min-width:100px;
+    border:1px solid green;
+    height:50px;
+}
+input{
+    width:150px;
+}
+button{
+    background: #8078a0;
+    width:100px;
+    border:1px solid green
+}
+select{
+    width:200px;
+    border:1px solid green;
+    height:20px
+}
+.add-product{
+    padding:10px;
+    margin:20px;
+    background: grey;
+}
+.add-invoice-item{
+    padding:10px;
+    margin:20px;
+    background: grey;
+}
+
+.invoices-items{
+    padding:10px;
+    margin:20px;
+    background: grey;
+}

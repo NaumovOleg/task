@@ -1,0 +1,29 @@
+<div class="invoice-items">
+    <table class="invoices-table">
+        <tr>
+            <td>Product/</td>
+            <td>Quantity/</td>
+            <td> invoice id</td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="invoice in invs.invoiceItems">
+            <td>{{ invoice.product.name}}</td>
+            <td>{{ invoice.quantity}}</td>
+            <td ng-show="!invs.edit">
+                <button ng-click="invs.edit=true">Edit quantity</button>
+            </td>
+            <td ng-show="invs.edit">
+                <input placeholder="quantity" ng-model="invs.quantityEdited">
+                <button ng-click="invs.editQuantity( invoice.product_id,invoice._id ,$event );invs.edit=false">send</button>
+            </td>
+            <td class="edited"></td>
+        </tr>
+    </table>
+</div>
+<div class="invoices-items">
+    <select ng-model="invs.invoiceItem.product_id">
+        <option ng-repeat="pr in invs.products" value={{pr._id}}>{{pr.name}}</option>
+    </select>
+    <input type="text" ng-model="invs.invoiceItem.quantity" placeholder="quantity">
+    <button ng-click="invs.addInvoiceItem()">Add invoice item</button>
+</div>

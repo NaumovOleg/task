@@ -1,0 +1,19 @@
+<div class="products-table">
+    <table>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>price</td>
+        </tr>
+        <tr ng-repeat="pr in pr.products">
+            <td>{{pr._id}}</td>
+            <td>{{pr.name}}</td>
+            <td>{{pr.price}}</td>
+        </tr>
+    </table>
+</div>
+<div class="add-product">
+    <input ng-model="pr.name" placeholder="name">
+    <input ng-model="pr.price" placeholder="price">
+    <button ng-click="pr.addProduct()">add product</button>
+</div>
